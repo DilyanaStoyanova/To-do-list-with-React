@@ -1,12 +1,18 @@
+import { FaPencilAlt } from "react-icons/fa";
+import { MdDeleteForever } from "react-icons/md";
+import { FaRegCheckCircle } from "react-icons/fa";
+
 export default function Item({ item, onDeleteItem, onSwitchStatus }) {
   return (
-    <li>
-      <span>
-        {item.description} {item.category}
-        {item.complete ? "well done" : "take action"}
-      </span>
-      <button onClick={() => onSwitchStatus(item.id)}>Change</button>
-      <button onClick={() => onDeleteItem(item.id)}>Delete</button>
+    <li className="item">
+      <FaRegCheckCircle />
+      <span>{item.description}</span>
+      <button className="btn" onClick={() => onSwitchStatus(item.id)}>
+        <FaPencilAlt />
+      </button>
+      <button className="btn" onClick={() => onDeleteItem(item.id)}>
+        <MdDeleteForever />
+      </button>
     </li>
   );
 }

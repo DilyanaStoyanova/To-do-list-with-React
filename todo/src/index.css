@@ -16,9 +16,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 6rem;
-  background-image: url(../public/main.jpg);
-
+  background-color: #efb5b1;
   color: #222;
 }
 
@@ -31,23 +29,81 @@ ul {
   list-style: none;
 }
 
-.heading-primary {
-  text-transform: capitalize;
+.center {
   text-align: center;
+}
+
+.app {
+  width: 56.3rem;
+  padding: 3.2rem 0;
+  margin: 0 auto;
+  background-image: url(../public/main.jpg);
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.3);
+}
+
+.add-form {
+  display: flex;
+  justify-content: center;
+  gap: 1.4rem;
   margin-bottom: 2.4rem;
 }
 
-.category {
-  width: 32rem;
-  height: 6rem;
-  overflow: hidden;
-  padding: 1.6rem;
-  border-radius: 12px;
+.add-form *:focus {
+  outline: none;
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.6);
 }
 
-.category:not(:first-child) {
-  margin-top: -1.6rem;
+.input,
+.select {
+  border: none;
+  border-radius: 12px;
+  padding: 0.8rem 3.2rem;
+  font-family: inherit;
+  font-size: 1.6rem;
 }
+
+.heading-primary {
+  font-size: 2.4rem;
+  text-transform: capitalize;
+}
+
+.heading-tertiary {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.subheading {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  margin-left: 1.6rem;
+}
+
+.category-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0 3.2rem;
+  margin-bottom: 3.6rem;
+  color: #fff;
+  border-radius: 12px;
+  background-color: transparent;
+}
+
+.category {
+  height: 6rem;
+  padding: 1.6rem;
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+  transition: all 0.5s;
+}
+
+.category:hover {
+  height: fit-content;
+}
+
 .category--1 {
   background-color: #4e5aac;
 }
@@ -74,7 +130,45 @@ ul {
   background-color: #8694b9;
 }
 
-.heading-tertiary {
-  font-size: 2rem;
+.count,
+.icon {
+  font-size: 2.4rem;
+  fill: #fff;
+  color: #fff;
+  position: absolute;
+  top: 1.4rem;
+}
+
+.count {
+  left: 1.4rem;
+}
+
+.icon {
+  right: 1.4rem;
+}
+
+.item {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.item:not(:last-child) {
   margin-bottom: 1.2rem;
+}
+
+.btn {
+  border: none;
+  background-color: #fff;
+  padding: 0.4rem 1.6rem;
+  border-radius: 9px;
+}
+
+.btn--add,
+.btn--delete {
+  font-size: 2rem;
+  text-transform: uppercase;
 }

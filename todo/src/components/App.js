@@ -2,10 +2,11 @@ import { useState } from "react";
 
 import Form from "./Form";
 import Category from "./Category";
+import Header from "./Header";
 
 function App() {
   const [items, setItems] = useState([]);
-  console.log(items);
+
   function handleAddItem(item) {
     setItems((items) => [...items, item]);
   }
@@ -33,12 +34,9 @@ function App() {
   }
   return (
     <div className="app">
-      <header>
-        <h1 className="heading-primary">Daily to do list</h1>
-      </header>
+      <Header />
       <main className="main">
         <Form onAddItem={handleAddItem} />
-
         <Category
           items={items}
           onDeleteItem={handleDeleteItem}

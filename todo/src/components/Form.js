@@ -25,12 +25,17 @@ export default function Form({ onAddItem }) {
     <>
       <form className="add-form" onSubmit={handleSubmit}>
         <input
+          className="input"
           type="text"
           value={description}
           placeholder="New item..."
           onChange={(e) => setDescription(e.target.value)}
         />
-        <select value={category} onChange={(e) => setCategory(e.target.value)}>
+        <select
+          className="select"
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+        >
           <option value="Must Do">Must Do</option>
           <option value="To Do">To Do</option>
           <option value="Call">Call</option>
@@ -39,7 +44,7 @@ export default function Form({ onAddItem }) {
           <option value="Before Bed">Before Bed</option>
           <option value="I'm Thankful For">I'm Thankful For</option>
         </select>
-        <button>Add</button>
+        <button className="btn btn--add">Add</button>
       </form>
     </>
   );
