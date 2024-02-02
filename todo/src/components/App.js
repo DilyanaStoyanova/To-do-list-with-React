@@ -24,9 +24,7 @@ function App() {
   }
 
   function handleDeleteAllItems() {
-    const confirmed = window.confirm(
-      "Are you sure you want to delete all items?"
-    );
+    const confirmed = window.confirm("Are you sure you want to delete all?");
 
     if (confirmed) {
       setItems([]);
@@ -34,7 +32,7 @@ function App() {
   }
   return (
     <div className="app">
-      <Header />
+      <Header items={items} />
       <main className="main">
         <Form onAddItem={handleAddItem} />
         <Category

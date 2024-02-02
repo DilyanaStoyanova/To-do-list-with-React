@@ -33,12 +33,43 @@ ul {
   text-align: center;
 }
 
+.linethrough {
+  text-decoration: line-through;
+}
+
 .app {
   width: 56.3rem;
   padding: 3.2rem 0;
   margin: 0 auto;
   background-image: url(../public/main.jpg);
   box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.3);
+}
+
+.header {
+  padding: 0 3.2rem;
+  margin-bottom: 2rem;
+}
+
+.heading-primary {
+  font-size: 2.4rem;
+  text-transform: capitalize;
+}
+
+.heading-tertiary {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.subheading {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.stat {
+  text-align: right;
+  font-size: 1.6rem;
 }
 
 .add-form {
@@ -62,22 +93,8 @@ ul {
   font-size: 1.6rem;
 }
 
-.heading-primary {
-  font-size: 2.4rem;
-  text-transform: capitalize;
-}
-
-.heading-tertiary {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.subheading {
-  font-size: 1.6rem;
-  margin-bottom: 2rem;
-  font-weight: 600;
-  margin-left: 1.6rem;
+.input {
+  text-transform: uppercase;
 }
 
 .category-content {
@@ -158,6 +175,10 @@ ul {
 
 .item:not(:last-child) {
   margin-bottom: 1.2rem;
+}
+
+.description {
+  flex: 2;
 }
 
 .btn {

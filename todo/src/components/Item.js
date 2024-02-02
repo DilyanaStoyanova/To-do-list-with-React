@@ -4,9 +4,9 @@ import { FaRegCheckCircle } from "react-icons/fa";
 
 export default function Item({ item, onDeleteItem, onSwitchStatus }) {
   return (
-    <li className="item">
+    <li className={`item ${item.complete ? "linethrough" : ""}`}>
       <FaRegCheckCircle />
-      <span>{item.description}</span>
+      <p className="description">{item.description}</p>
       <button className="btn" onClick={() => onSwitchStatus(item.id)}>
         <FaPencilAlt />
       </button>
